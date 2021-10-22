@@ -4,7 +4,7 @@
     <c:param name ="content">
         <h2>id : ${message.id} のメッセージ編集ページ</h2>
         
-        <form method ="POST" action ="${pageCpntext.request.contextPath}/update">
+        <form method ="POST" action ="${pageContext.request.contextPath}/update">
             <c:import url="_form.jsp" />
         </form>
         

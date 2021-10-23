@@ -39,8 +39,10 @@ public class CreateServlet extends HttpServlet {
             m.setCreated_at(currentTime);
             m.setUpdated_at(currentTime);
             
+            //DBに保存
             em.persist(m);
             em.getTransaction().commit();
+            request.getSession().setAttribute("flush", "登録が完了しました。");
             em.close();
             
             response.sendRedirect(request.getContextPath() + "/index");
